@@ -61,7 +61,7 @@ async function login(driver) {
   account_input.sendKeys(artPriceAC)
   const password_input = await driver.wait(until.elementLocated(By.xpath(`//*[@id="pass"]`)))
   password_input.sendKeys(artPricePW)
-  const login_submit = await driver.wait(until.elementLocated(By.xpath(`//*[@id="weblog_form"]/button`)))
+  const login_submit = await driver.wait(until.elementLocated(By.className('e2e-login-submit-btn')))
   login_submit.click()
   await driver.sleep(5000)
 
